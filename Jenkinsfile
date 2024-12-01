@@ -11,7 +11,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat '"C:\Program Files\Git\bin\bash.exe" -c ".\jenkins\scripts\test.sh"'
+                // Use double backslashes to escape backslashes in the path
+                bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c ".\\jenkins\\scripts\\test.sh"'
             }
         }
     }
